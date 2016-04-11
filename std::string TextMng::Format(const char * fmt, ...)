@@ -1,0 +1,10 @@
+std::string TextMng::Format(const char * fmt, ...)
+{
+    static char * buf = new char[4096];
+    va_list vars;
+    va_start(vars, fmt);
+    vsprintf(buf, fmt, vars);
+    va_end(vars);
+    return buf;
+}
+

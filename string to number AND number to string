@@ -1,0 +1,27 @@
+template<typename _Int>
+	inline std::string IntToString(_Int value)
+	{
+		std::stringstream ss;
+		ss << value;
+		std::string str;
+		ss >> str;
+		return std::move(str);
+	}
+    template<typename _Int>
+    inline std::string NumToString(_Int value)
+    {
+        std::stringstream ss;
+        ss << value;
+        std::string str;
+        ss >> str;
+        return std::move(str);
+    }
+    template<typename _Num>
+    inline _Num StringToNumber(std::string str)
+    {
+    _Num res = 0;
+		std::stringstream ss;
+		ss << str;
+		ss >> res;
+    return res;
+    }
